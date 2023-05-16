@@ -22,6 +22,7 @@ body {
   --para-color: #80849c;
   --helper-color: #1264fa;
   --section-bg-color: #e6e6eb;
+  --navbar-bg-color: #e6e8f3;
   --white: #ffff;
 }
 
@@ -51,7 +52,14 @@ h4 {
 /* ----------------
  Navbar Styling Starts 
  ----------------*/
-
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999999;
+  background-color: var(--navbar-bg-color)
+}
 .navbar {
   display: flex;
   align-items: center;
