@@ -1,0 +1,224 @@
+/* Importing Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap");
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+html {
+  font-size: 62.5%; /*1rem equals to 10px */
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+:root {
+  --primary-color: #04168b;
+  --primary-shades: #00020b;
+  --para-color: #80849c;
+  --helper-color: #1264fa;
+  --section-bg-color: #e6e6eb;
+  --white: #ffff;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+.image {
+  display: inline-block;
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: var(--primary-color);
+}
+.para {
+  color: var(--para-color);
+  line-height: 1.7;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+/* ----------------
+ Navbar Styling Starts 
+ ----------------*/
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 25rem;
+  cursor: pointer;
+}
+.header {
+  height: 9.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3.4rem;
+}
+
+.navbar-list {
+  display: flex;
+  gap: 3.2rem;
+  font-size: 1.5rem;
+}
+.navbar-list .navbar-link {
+  text-transform: uppercase;
+  color: var(--primary-color);
+  transition: 0.3s all ease-out;
+}
+.navbar-list .navbar-link:hover,
+.navbar-list .navbar-link:active {
+  color: var(--helper-color);
+}
+
+.navbar-list .navbar-btn {
+  padding: 1rem 2rem;
+  border: 1px solid var(--helper-color);
+  border-radius: 10rem;
+  background-color: var(--white);
+  transition: 0.3s all ease-in-out;
+}
+.navbar-list .navbar-btn:hover,
+.navbar-list .navbar-btn:active {
+  background-color: var(--helper-color);
+  color: var(--white);
+}
+
+.mobile-nav-icon {
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+.mobile-navbar-btn {
+  display: none;
+}
+.mobile-nav-icon[name="close-circle"] {
+  display: none;
+}
+
+/*------------------- 
+   Reusable Codes
+------------------ */
+.section {
+  padding: 9.6rem 0;
+}
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 3.2rem;
+}
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+.grid-two-column {
+  grid-template-columns: repeat(2, 1fr);
+}
+.btn {
+  font-size: 1.6rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 10rem;
+  background-color: var(--helper-color);
+  color: var(--white);
+  text-transform: 60%ze;
+  transition: all 0.3s linear;
+}
+.btn:hover,
+.btn:active {
+  transform: scale(2);
+}
+
+/*------------------- 
+   Hero Section Style Starts
+------------------ */
+.section-hero {
+  position: relative;
+}
+.section-hero::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 50%;
+  right: 0;
+  bottom: 9.6rem;
+  background-color: var(--section-bg-color);
+  z-index: -1;
+}
+.primary-heading {
+  font-size: 6rem;
+  font-weight: 700;
+}
+.section-hero .para {
+  margin-top: 2rem;
+  margin-bottom: 3.2rem;
+}
+.hero-icons {
+  margin-top: 4.2rem;
+}
+.hero-icons .icon {
+  font-size: 6rem;
+  position: relative;
+}
+.hero-icons .icon::after {
+  content: "";
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background-color: var(--helper-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  z-index: -1;
+}
+.hero-icons h2 {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+.section-hero .hero-icons .para {
+  line-height: 1.6;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+.hero-image img {
+  height: 90%;
+  box-shadow: 0 0 10rem rgba(0, 0, 0, 0.1);
+}
+.hero-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  background-color: var(--primary-color);
+  padding: 4rem;
+}
+.hero-image-overlay .para {
+  color: var(--white);
+}
+.hero-image-overlay .para:nth-child(2) {
+  font-weight: bold;
+  color: var(--white);
+  margin: 0;
+}
+.hero-image-overlay .para:last-child {
+  margin: 0;
+}
